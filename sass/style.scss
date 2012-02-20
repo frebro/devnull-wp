@@ -1,0 +1,29 @@
+
+/*!
+Theme Name:   escape from /dev/null
+Theme URI:    https://github.com/frebro/devnull-wp
+Author:       Fredrik Broman
+Author URI:   http://syn-ack.se/
+Description:  Wordpress theme for the escape from /dev/null conference
+
+Template:     swdc-wpbp
+*/
+
+// Compass
+@import "compass/css3";
+@import "compass/typography";
+
+// Setup
+@import 'partials/base';
+
+// Fonts
+@import url('http://fonts.googleapis.com/css?family=Inconsolata');
+
+// Parent theme styles
+@import url('../swdc-wpbp/style.css');
+@import "../../swdc-wpbp/sass/partials/utils";
+@import "../../swdc-wpbp/sass/partials/components";
+@import "../../swdc-wpbp/sass/partials/wp";
+
+// Page
+@import 'partials/page';

@@ -1,0 +1,17 @@
+
+$base-font-family   : unquote('Inconsolata, Lucida Console, Consolas, Lucida Sans Typewriter, monospace');
+$base-font-size     : 16px;
+$base-line-height   : 1.5; // 24px
+
+$small-font-size    : 0.75em; // ~12px
+$large-font-size    : 1.25em; // ~20px
+$xlarge-font-size   : 1.625em; // ~26px
+
+$bg-color           : #020e1a;
+$text-color         : white;
+$link-color         : #4dfeb1;
+
+$base-vmargin       : 24px;
+$base-hmargin       : $base-vmargin;
+
+$default-border-radius    : 2px;

@@ -1,0 +1,148 @@
+
+html {
+  background: $bg-color image-url('starfield.png');
+  color: $text-color;
+  height: 100%;
+  -webkit-animation: BG-POSITION 16s linear infinite;
+  -moz-animation: BG-POSITION 16s linear infinite;
+  -ms-animation: BG-POSITION 16s linear infinite;
+}
+
+body {
+  @include background-image( linear-gradient( top, rgba( black, 0 ), rgba( black, 0.6 ) ) );
+  font: #{$base-font-size}/#{$base-line-height} $base-font-family;
+  min-height: 100%;
+}
+
+a {
+  @include hover-link;
+  color: $link-color;
+}
+
+#starship {
+  background: image-url('starship.png') 340px -260px no-repeat;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  -webkit-animation: STARSHIP-POSITION 20s;
+  -moz-animation: STARSHIP-POSITION 20s;
+  -ms-animation: STARSHIP-POSITION 20s;
+}
+
+#container {
+  @include clearfix;
+  background: rgba( black, .4 );
+  padding-left: 2 * $base-vmargin;
+  padding-top: 2 * $base-vmargin;
+  position: relative;
+  width: 640px;
+}
+
+#header {
+  .site-title {
+    background: $link-color;
+    color: $bg-color;
+    padding: 0 $base-hmargin;
+    a {
+      @include unstyled-link;
+    }
+  }
+}
+
+#main {
+  .entry-header,
+  .entry-content,
+  .entry-footer {
+    padding: 0 $base-hmargin;
+  }
+}
+
+#sidebar-main {
+  padding: $base-vmargin $base-hmargin;
+}
+
+#footer {
+  background: rgba( black, .4 );
+  border-left: 1px solid black;
+  bottom: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 140px;
+}
+
+// WIDGETS
+.widget_puffbutton {
+  a {
+    @include border-radius;
+    @include transition;
+    @include unstyled-link;
+    background: transparent;
+    border: 1px solid $link-color;
+    display: block;
+    font-weight: bold;
+    padding: .25 * $base-vmargin $base-hmargin;
+    -webkit-animation: BUTTON-BGPULSE 3s infinite;
+    -moz-animation: BUTTON-BGPULSE 3s infinite;
+    -ms-animation: BUTTON-BGPULSE 3s infinite;
+    &:after {
+      content: ' ›';
+    }
+    &:focus,
+    &:hover {
+      background: $link-color;
+      color: $bg-color;
+      -webkit-animation: none;
+      -moz-animation: none;
+      -ms-animation: none;
+    }
+  }
+}
+
+// ANIMATIONS
+@-webkit-keyframes BUTTON-BGPULSE {
+  0%   { background: rgba( $link-color, 0 ); }
+  50%   { background: rgba( $link-color, .2 ); }
+  100% { background: rgba( $link-color, 0 ); }
+}
+@-moz-keyframes BUTTON-BGPULSE {
+  0%   { background: rgba( $link-color, 0 ); }
+  50%   { background: rgba( $link-color, .2 ); }
+  100% { background: rgba( $link-color, 0 ); }
+}
+@-ms-keyframes BUTTON-BGPULSE {
+  0%   { background: rgba( $link-color, 0 ); }
+  50%   { background: rgba( $link-color, .2 ); }
+  100% { background: rgba( $link-color, 0 ); }
+}
+
+@-webkit-keyframes BG-POSITION {
+  0%   { background-position: 0 0; }
+  100% { background-position: -1 * image-width('starfield.png') image-height('starfield.png'); }
+}
+@-moz-keyframes BG-POSITION {
+  0%   { background-position: 0 0; }
+  100% { background-position: -1 * image-width('starfield.png') image-height('starfield.png'); }
+}
+@-ms-keyframes BG-POSITION {
+  0%   { background-position: 0 0; }
+  100% { background-position: -1 * image-width('starfield.png') image-height('starfield.png'); }
+}
+
+@-webkit-keyframes STARSHIP-POSITION {
+  0%   { background-position: -1 * image-width('starship.png') .25 * image-height('starship.png'); }
+  10%   { background-position: -1 * image-width('starship.png') .25 * image-height('starship.png'); }
+  100% { background-position: 340px -260px; }
+}
+@-moz-keyframes STARSHIP-POSITION {
+  0%   { background-position: -1 * image-width('starship.png') .25 * image-height('starship.png'); }
+  10%   { background-position: -1 * image-width('starship.png') .25 * image-height('starship.png'); }
+  100% { background-position: 340px -260px; }
+}
+@-ms-keyframes STARSHIP-POSITION {
+  0%   { background-position: -1 * image-width('starship.png') .25 * image-height('starship.png'); }
+  10%   { background-position: -1 * image-width('starship.png') .25 * image-height('starship.png'); }
+  100% { background-position: 340px -260px; }
+}
