@@ -20,7 +20,7 @@ a {
 }
 
 #starship {
-  background: image-url('starship.png') 340px -260px no-repeat;
+  background: image-url('starship.png') 360px 10px no-repeat;
   bottom: 0;
   left: 0;
   position: absolute;
@@ -67,10 +67,15 @@ a {
   background: rgba( black, .4 );
   border-left: 1px solid black;
   bottom: 0;
+  padding: $base-vmargin .5 * $base-hmargin;
   position: fixed;
   right: 0;
   top: 0;
   width: 140px;
+  img {
+    height: auto;
+    max-width: 140px;
+  }
 }
 
 // WIDGETS
@@ -133,16 +138,13 @@ a {
 
 @-webkit-keyframes STARSHIP-POSITION {
   0%   { background-position: -1 * image-width('starship.png') .25 * image-height('starship.png'); }
-  10%   { background-position: -1 * image-width('starship.png') .25 * image-height('starship.png'); }
-  100% { background-position: 340px -260px; }
+  100% { background-position: 360px 10px; }
 }
 @-moz-keyframes STARSHIP-POSITION {
   0%   { background-position: -1 * image-width('starship.png') .25 * image-height('starship.png'); }
-  10%   { background-position: -1 * image-width('starship.png') .25 * image-height('starship.png'); }
-  100% { background-position: 340px -260px; }
+  100% { background-position: 360px 10px; }
 }
 @-ms-keyframes STARSHIP-POSITION {
   0%   { background-position: -1 * image-width('starship.png') .25 * image-height('starship.png'); }
-  10%   { background-position: -1 * image-width('starship.png') .25 * image-height('starship.png'); }
-  100% { background-position: 340px -260px; }
+  100% { background-position: 360px 10px; }
 }
